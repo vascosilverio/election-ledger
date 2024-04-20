@@ -1,0 +1,42 @@
+@startuml
+annotation java.lang.Override
+class electionLedger.blockchain.Block
+class electionLedger.blockchain.BlockChain
+class electionLedger.blockchain.BlockchainException
+class electionLedger.miner.MinerP2P
+class electionLedger.utils.Hash
+class electionLedger.utils.MerkleTree
+class electionLedger.utils.Serializer
+class java.io.FileInputStream
+class java.io.FileOutputStream
+class java.io.ObjectInputStream
+class java.io.ObjectOutputStream
+class java.lang.Exception
+class java.util.concurrent.CopyOnWriteArrayList
+class java.util.logging.Level
+class java.util.logging.Logger
+class javax.swing.JOptionPane
+interface java.io.Serializable
+electionLedger.blockchain.Block ..> java.lang.Override
+electionLedger.blockchain.Block ..> electionLedger.miner.MinerP2P
+electionLedger.blockchain.Block ..> electionLedger.utils.Hash
+electionLedger.blockchain.Block ..> electionLedger.utils.MerkleTree
+electionLedger.blockchain.Block ..> electionLedger.utils.Serializer
+electionLedger.blockchain.Block ..> java.util.concurrent.CopyOnWriteArrayList
+electionLedger.blockchain.Block --|> java.io.Serializable
+electionLedger.blockchain.BlockChain ..> java.lang.Override
+electionLedger.blockchain.BlockChain ..> electionLedger.utils.MerkleTree
+electionLedger.blockchain.BlockChain ..> java.io.FileInputStream
+electionLedger.blockchain.BlockChain ..> java.io.FileOutputStream
+electionLedger.blockchain.BlockChain ..> java.io.ObjectInputStream
+electionLedger.blockchain.BlockChain ..> java.io.ObjectOutputStream
+electionLedger.blockchain.BlockChain ..> java.util.concurrent.CopyOnWriteArrayList
+electionLedger.blockchain.BlockChain ..> java.util.logging.Level
+electionLedger.blockchain.BlockChain ..> java.util.logging.Logger
+electionLedger.blockchain.BlockChain --|> java.io.Serializable
+electionLedger.blockchain.BlockchainException ..> java.lang.Override
+electionLedger.blockchain.BlockchainException --|> java.lang.Exception
+electionLedger.blockchain.BlockchainException ..> java.util.logging.Level
+electionLedger.blockchain.BlockchainException ..> java.util.logging.Logger
+electionLedger.blockchain.BlockchainException ..> javax.swing.JOptionPane
+@enduml
